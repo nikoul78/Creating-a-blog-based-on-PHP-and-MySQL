@@ -10,9 +10,18 @@ class UsersController extends BaseController
                 $this->setValidationError("username", "Invalid username");
             }
             $password = $_POST['password'];
-            if (strlen($password) < 2 || strlen($password) > 50) {
-                $this->setValidationError("password", "Invalid password");
+            //$confirm_password = $_POST['password'];
+            $uppercase = preg_match('#[A-Z]#', $password);
+            $lowercase = preg_match('#[a-z]#', $password);
+            $number    = preg_match('#[0-9]#', $password);
+
+            if(!$uppercase || !$lowercase || !$number ||
+                (strlen($password) < 3 || strlen($password) > 50)) {
+                $this->setValidationError("password", "Invalid password! Your password must 
+                be 3 characters, including at least 1 uppercase letter, 1 lowercase letter, 
+                and 1 digit!");
             }
+
             $full_name = $_POST['full_name'];
             if (strlen($full_name)  > 200) {
                 $this->setValidationError("full_name", "Invalid full name");
@@ -25,7 +34,8 @@ class UsersController extends BaseController
                     $this->addInfoMessage("Registration successful.");
                     $this->redirect("posts");
                 }else{
-                    $this->addErrorMessage("Error: user registration failed!");
+                    $this->addErrorMessage("Error: User registration failed! Please, check your data 
+                                            and try again.");
                 }
             }
         }
@@ -43,7 +53,7 @@ class UsersController extends BaseController
                 $this->addInfoMessage("Login successful.");
                 return $this->redirect("posts");
             } else {
-                $this->addErrorMessage("Error: login failed");
+                $this->addErrorMessage("Error: Login failed! Please, go to register.");
             }
         }
     }

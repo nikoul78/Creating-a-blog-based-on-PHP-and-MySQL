@@ -1,4 +1,4 @@
-<?php $this->title = 'Welcome to My Blog'; ?>
+<?php $this->title = 'Welcome to InterStellar-Team-Blog'; ?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
@@ -20,4 +20,5 @@
         </p>
         <p><?= $post['content']; ?></p>
     <?php endforeach; ?>
+
 </main>
