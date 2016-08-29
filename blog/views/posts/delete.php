@@ -1,16 +1,16 @@
-<?php $this->title = 'Delete Post'; ?>
+<?php $this->title = 'Изтрий публикация'; ?>
 
-<h1>Are you sure you want to delete this post?</h1>
+<h1>Сигурни ли сте, че искате да изтриете публикацията?</h1>
 
 <form method="post">
-    <div>Title:</div>
+    <div>Заглавие:</div>
     <input type="text" value="<?=htmlspecialchars($this->post['title'])?>" disabled/>
-    <div>Content:</div>
+    <div>Съдържание:</div>
     <textarea rows="10" disabled><?=htmlspecialchars($this->post['content'])?></textarea>
-    <div>Date:</div>
+    <div>Дата:</div>
     <input type="text" value="<?=htmlspecialchars($this->post['date'])?>" disabled/>
-    <div>Author ID:</div>
+    <div>Идентификационен код на автора:</div>
     <input type="text" value="<?=htmlspecialchars($this->post['user_id'])?>" disabled/>
     <div><input type="submit" value="Delete" />
-        <a href="<?=APP_ROOT?>/posts">[Cancel]</a></div>
+        <a href="<?=APP_ROOT?>/posts">[Отказ]</a></div>
 </form>

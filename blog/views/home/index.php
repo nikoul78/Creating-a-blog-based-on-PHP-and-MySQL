@@ -1,9 +1,9 @@
-<?php $this->title = 'Welcome to InterStellar-Team-Blog'; ?>
+<?php $this->title = 'Добре дошли в блога на InterStellar'; ?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
 <aside>
-    <h2>Recent Posts</h2>
+    <h2>Последни публикации</h2>
     <?php foreach ($this->postsSidebar as $post) : ?>
         <a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?= htmlentities($post['title']); ?></a>
     <?php endforeach; ?>
@@ -13,7 +13,7 @@
     <?php foreach ($this->posts as $post) : ?>
         <h1><?= htmlentities($post['title']); ?></h1>
         <p>
-            <i>Posted on</i>
+            <i>Публикувано на</i>
             <?= htmlentities($post['date']); ?>
             <i>by</i>
             <?= htmlentities($post['full_name']); ?>

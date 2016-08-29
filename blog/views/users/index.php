@@ -1,12 +1,12 @@
-<?php $this->title = "Users"; ?>
+<?php $this->title = "Потребители"; ?>
 
 <h1><?= htmlspecialchars($this->title)?></h1>
 
 <table>
     <tr>
-        <th>ID</th>
-        <th>Username</th>
-        <th>Full name</th>
+        <th>Номер</th>
+        <th>Потребителско име</th>
+        <th>Пълно име</th>
     </tr>
 
     <?php foreach ($this->users as $user) : ?>

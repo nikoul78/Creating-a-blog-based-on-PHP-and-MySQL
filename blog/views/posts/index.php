@@ -1,12 +1,12 @@
 <main>
     <table>
         <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Author</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th>Номер</th>
+            <th>Заглавие</th>
+            <th>Съдържание</th>
+            <th>Автор</th>
+            <th>Дата</th>
+            <th>Действия</th>
         </tr
 
     <?php foreach ($this->posts as $post) : ?>
@@ -18,8 +18,8 @@
             <td><?= htmlspecialchars($post['date'])?></td>
 
             <td>
-                <a href="<?=APP_ROOT?>/posts/edit/<?=$post['id']?>">[Edit]</a>
-                <a href="<?=APP_ROOT?>/posts/delete/<?=$post['id']?>">[Delete]</a>
+                <a href="<?=APP_ROOT?>/posts/edit/<?=$post['id']?>">[Редакция]</a>
+                <a href="<?=APP_ROOT?>/posts/delete/<?=$post['id']?>">[Изтриване]</a>
             </td>
         </tr>
     <?php endforeach; ?>

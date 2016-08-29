@@ -7,7 +7,7 @@ class UsersController extends BaseController
         if ($this->isPost) {
             $username = $_POST['username'];
             if (strlen($username) < 2 || strlen($username) > 50) {
-                $this->setValidationError("username", "Invalid username");
+                $this->setValidationError("username", "Невалидно потребителско име!");
             }
             $password = $_POST['password'];
             //$confirm_password = $_POST['password'];
@@ -17,25 +17,24 @@ class UsersController extends BaseController
 
             if(!$uppercase || !$lowercase || !$number ||
                 (strlen($password) < 3 || strlen($password) > 50)) {
-                $this->setValidationError("password", "Invalid password! Your password must 
-                be 3 characters, including at least 1 uppercase letter, 1 lowercase letter, 
-                and 1 digit!");
+                $this->setValidationError("password", "Невалидна парола! Паролата трябва да съдържа поне
+                 1 голяма латинска буква, 1 една малка латинска буква и една цифра.");
             }
 
             $full_name = $_POST['full_name'];
             if (strlen($full_name)  > 200) {
-                $this->setValidationError("full_name", "Invalid full name");
+                $this->setValidationError("full_name", "Невалидно поле пълно име");
             }
             if($this->formValid()){
                 $userId = $this->model->register($username, $password, $full_name);
                 if($userId){
                     $_SESSION['username'] = $username;
                     $_SESSION['user_id'] = $userId;
-                    $this->addInfoMessage("Registration successful.");
+                    $this->addInfoMessage("Успешна регистрация.");
                     $this->redirect("posts");
                 }else{
-                    $this->addErrorMessage("Error: User registration failed! Please, check your data 
-                                            and try again.");
+                    $this->addErrorMessage("Грешка: Неуспешна регистрация! Моля, проверете
+                    въведените данни и опитайте отново.");
                 }
             }
         }
@@ -50,10 +49,11 @@ class UsersController extends BaseController
             if ($loggedUserId) {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $loggedUserId;
-                $this->addInfoMessage("Login successful.");
+                $this->addInfoMessage("Успешен вход в профила.");
                 return $this->redirect("posts");
             } else {
-                $this->addErrorMessage("Error: Login failed! Please, go to register.");
+                $this->addErrorMessage("Грешка: Неуспешен вход в профила!
+                Моля, опитайте отново или се регистрирайте.");
             }
         }
     }
@@ -62,7 +62,7 @@ class UsersController extends BaseController
     public function logout()
     {
         session_destroy();
-        $this->addInfoMessage("Logout successful");
+        $this->addInfoMessage("Успешен изход от профила!");
         $this->redirect("");
     }
 

@@ -12,20 +12,20 @@
 <body>
 <header>
     <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/bbc-blogs.jpg"></a>
-    <a href="<?=APP_ROOT?>/">Home</a>
+    <a href="<?=APP_ROOT?>/"><img src="<?=APP_ROOT?>/content/images/home.png"></a>
     <?php if ($this->isLoggedIn) : ?>
-        <a href="<?=APP_ROOT?>/posts">Posts</a>
-        <a href="<?=APP_ROOT?>/posts/create">Create Post</a>
-        <a href="<?=APP_ROOT?>/users">Users</a>
+        <a href="<?=APP_ROOT?>/posts">Публикации</a>
+        <a href="<?=APP_ROOT?>/posts/create">Създаване на публикация</a>
+        <a href="<?=APP_ROOT?>/users">Потребители</a>
     <?php else: ?>
-        <a href="<?=APP_ROOT?>/users/login">Login</a>
-        <a href="<?=APP_ROOT?>/users/register">Register</a>
+        <a href="<?=APP_ROOT?>/users/login">Вход</a>
+        <a href="<?=APP_ROOT?>/users/register">Регистрация</a>
     <?php endif; ?>
     <?php if ($this->isLoggedIn) : ?>
         <div id="logged-in-info">
-            <span>Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
+            <span>Здравей, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
             <form method="post" action="<?=APP_ROOT?>/users/logout">
-                <input type="submit" value="Logout"/>
+                <input type="submit" value="Изход"/>
             </form>
         </div>
     <?php endif; ?>
