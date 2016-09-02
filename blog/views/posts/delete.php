@@ -9,8 +9,8 @@
     <textarea rows="10" disabled><?=htmlspecialchars($this->post['content'])?></textarea>
     <div>Дата:</div>
     <input type="text" value="<?=htmlspecialchars($this->post['date'])?>" disabled/>
-    <div>Идентификационен код на автора:</div>
+    <div>Уникален код на автора:</div>
     <input type="text" value="<?=htmlspecialchars($this->post['user_id'])?>" disabled/>
-    <div><input type="submit" value="Delete" />
+    <div><input type="submit" value="Изтрий" />
         <a href="<?=APP_ROOT?>/posts">[Отказ]</a></div>
 </form>

@@ -4,7 +4,7 @@ class UsersModel extends BaseModel
     public function getAll(): array 
     {
         $statement = self::$db->query(
-            "SELECT * from users ORDER BY username");
+            "SELECT * from users ORDER BY id");
         return $statement->fetch_all(MYSQLI_ASSOC);
         
     }

@@ -14,10 +14,9 @@ body>header>a>img, body>header a  {
 }
 
 
-
 body {
     padding: 15px;
-    background: url(images/header_blog_1280x500.jpg);
+    background: url(images/background.png);
     background-size:cover;
     font-family: Consolas;
 }
@@ -25,9 +24,11 @@ body {
 
 table th, table td {
     border-radius: 5px;
-    background: transparent;
+    background: linear-gradient(whitesmoke, white, lightgray, silver);
     padding: 5px;
     font-family: Consolas;
+    font-size: 14px;
+
 }
 
 ul#messages li {
@@ -41,8 +42,9 @@ ul#messages li {
 }
 
 ul#messages li.info {
-    background: #7f7;
+
     font-family: Consolas;
+    background: linear-gradient(transparent, ghostwhite,whitesmoke, white) ;
 }
 
 ul#messages li.error {
@@ -50,6 +52,7 @@ ul#messages li.error {
     color: white;
     border-radius: 10px;
     font-family: Consolas;
+    font-size: 16px;
 }
 
 .validation-error {
@@ -58,6 +61,7 @@ ul#messages li.error {
     color: red;
     border-radius: 10px;
     font-family: Consolas;
+    font-size: 16px;
 }
 
 #logged-in-info {
@@ -65,11 +69,13 @@ ul#messages li.error {
     margin-top: 18px;
     border-radius: 10px;
     font-family: Consolas;
+
 }
 
 #logged-in-info form {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
     border-radius: 10px;
     font-family: Consolas;
 }
@@ -82,11 +88,14 @@ body>aside {
     margin-left: 20px;
     border-radius: 10px;
     border-color: darkgray;
+    background: linear-gradient(transparent, ghostwhite,whitesmoke, white);
 }
+
 
 body>aside h2 {
     margin: 5px 0px 15px 0px;
     font-family: Consolas;
+
 }
 
 body>aside a {
@@ -94,7 +103,17 @@ body>aside a {
     margin: 5px 0px;
     text-decoration: blink;
     font-family: Consolas;
+
 }
+
+
+body>aside p {
+    display: block;
+    margin: 5px 0px;
+    text-decoration: blink;
+    font-family: Consolas;
+}
+
 
 body>main:after {
     content: '';
@@ -112,9 +131,43 @@ body>footer {
     margin: 5px 0;
     text-align: center;
     width: 100%;
-
     bottom:0;
     width:100%;
     height:20px;
     border-radius: 10px;/* Height of the footer */
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+}
+input[type=text], select {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+
+    background: linear-gradient(whitesmoke, white, lightgray, silver);
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Consolas;
 }

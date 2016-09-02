@@ -6,7 +6,7 @@
     <tr>
         <th>Номер</th>
         <th>Потребителско име</th>
-        <th>Пълно име</th>
+        <th>Име и фамилия</th>
     </tr>
 
     <?php foreach ($this->users as $user) : ?>

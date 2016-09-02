@@ -5,7 +5,7 @@
     <p>
         <i>Публикувано на</i>
         <?= htmlentities($this->post['date']); ?>
-        <i>by</i>
+        <i>от</i>
         <?= htmlentities($this->post['full_name']); ?>
     </p>
     <p><?= $this->post['content']; ?></p>
