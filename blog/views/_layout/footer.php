@@ -1,7 +1,7 @@
 
 <footer>
     <div id="footerInner"></div>
-    (c) Blog System, 2016
+    (c) Software University 2016
 
 
 </footer>

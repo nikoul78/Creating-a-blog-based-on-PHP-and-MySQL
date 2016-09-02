@@ -18,11 +18,11 @@ class UsersController extends BaseController
             if(!$uppercase || !$lowercase || !$number ||
                 (strlen($password) < 3 || strlen($password) > 50)) {
                 $this->setValidationError("password", "Невалидна парола! Паролата трябва да съдържа поне
-                 1 голяма латинска буква, 1 една малка латинска буква и една цифра.");
+                 1 голяма и 1 една малка латинска буква и една цифра.");
             }
 
             $full_name = $_POST['full_name'];
-            if (strlen($full_name)  > 200) {
+            if (strlen($full_name)  > 100) {
                 $this->setValidationError("full_name", "Невалидно поле Име и фамилия");
             }
             if($this->formValid()){

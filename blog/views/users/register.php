@@ -12,7 +12,7 @@
     <div><label for="full_name">Име и фамилия:</label></div>
     <input type="text" id="full_name" name="full_name">
     <div>
-        <input type="submit" value="Register">
+        <input type="submit" value="Регистрация">
         <a href="<?=APP_ROOT?>/users/login">[Към Вход в профила]</a>
     </div>
 </form>

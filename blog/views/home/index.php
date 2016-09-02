@@ -1,4 +1,6 @@
-<?php $this->title = 'В помощ на малкия бизнес'; ?>
+<?php $this->title = 'В подкрепа на малкия бизнес'; ?>
+
+
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
@@ -15,9 +17,7 @@
     <br>
     <h2>Виц на деня</h2>
          <a class="heading-vicovete-link" target="_blank" href="//vicove.vesti.bg/">
-                <span class="heading-vicovete-text">
-                    Виц на деня
-                </span>
+
         </a>
 
     <div class="vicove-main">
