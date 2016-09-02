@@ -1,7 +1,7 @@
 
 <footer>
     <div id="footerInner"></div>
-    (c) Software University 2016
+    (c) Софтуерен университет 2016
 
 
 </footer>

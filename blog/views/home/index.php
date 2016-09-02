@@ -1,7 +1,6 @@
 <?php $this->title = 'В подкрепа на малкия бизнес'; ?>
 
 
-
 <h1><?=htmlspecialchars($this->title)?></h1>
 
 <aside>

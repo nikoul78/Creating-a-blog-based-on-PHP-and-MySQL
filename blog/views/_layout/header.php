@@ -8,6 +8,7 @@
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>
     <title><?php if (isset($this->title)) echo htmlspecialchars($this->title) ?></title>
 
+
 </head>
 
 <body>

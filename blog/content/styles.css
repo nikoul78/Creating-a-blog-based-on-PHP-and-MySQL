@@ -1,11 +1,11 @@
-body>header h1 {
+body> h1 {
     padding: 5px;
     border-radius: 10px;
     font-family: Consolas;
-    font-size: 3em;
+    font-size: 2.6em;
     text-decoration-color: black;
 }
-body>header>main h2 {
+body>main h1 {
     padding: 5px;
     border-radius: 10px;
     font-family: Consolas;
@@ -86,6 +86,7 @@ ul#messages li.error {
     margin-left: 100px;
     border-radius: 10px;
     font-family: Consolas;
+    color: #cccccc;
 }
 
 body>aside {
@@ -96,7 +97,7 @@ body>aside {
     margin-left: 20px;
     border-radius: 10px;
     border-color: darkgray;
-    background: linear-gradient(transparent, ghostwhite,whitesmoke, white);
+    background: linear-gradient(ghostwhite,whitesmoke, white);
 }
 
 
@@ -148,17 +149,16 @@ body>footer {
     background: transparent;
 }
 input[type=text], select {
-
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #cccccc;
     border-radius: 5px;
     box-sizing: border-box;
+    color: #cccccc;
 }
 
 input[type=password], select {
-
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -177,4 +177,8 @@ input[type=submit] {
     cursor: pointer;
     font-size: 16px;
     font-family: Consolas;
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }

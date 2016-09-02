@@ -10,13 +10,14 @@ class UsersController extends BaseController
                 $this->setValidationError("username", "Невалидно потребителско име!");
             }
             $password = $_POST['password'];
-            //$confirm_password = $_POST['password'];
+            $password_repeat = $_POST['password_repeat'];
+
             $uppercase = preg_match('#[A-Z]#', $password);
             $lowercase = preg_match('#[a-z]#', $password);
             $number    = preg_match('#[0-9]#', $password);
 
             if(!$uppercase || !$lowercase || !$number ||
-                (strlen($password) < 3 || strlen($password) > 50)) {
+                (strlen($password) < 3 || strlen($password) > 50) || ($password_repeat != $password)) {
                 $this->setValidationError("password", "Невалидна парола! Паролата трябва да съдържа поне
                  1 голяма и 1 една малка латинска буква и една цифра.");
             }
@@ -26,7 +27,7 @@ class UsersController extends BaseController
                 $this->setValidationError("full_name", "Невалидно поле Име и фамилия");
             }
             if($this->formValid()){
-                $userId = $this->model->register($username, $password, $full_name);
+                $userId = $this->model->register($username, $password, $password_repeat, $full_name);
                 if($userId){
                     $_SESSION['username'] = $username;
                     $_SESSION['user_id'] = $userId;

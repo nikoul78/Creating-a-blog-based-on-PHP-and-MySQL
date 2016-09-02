@@ -10,7 +10,7 @@ class UsersModel extends BaseModel
     }
     
     public function register(
-        string $username, string $password, string $full_name)
+        string $username, string $password, string $password_repeat, string $full_name)
     {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $statement = self::$db->prepare(
