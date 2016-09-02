@@ -9,7 +9,7 @@
     <input type="password" id="password" name="password">
     <div><label for="password">Повторете паролата:</label></div>
     <input type="password" id="password_repeat" name="password_repeat">
-    <div><label for="full_name">Пълно име:</label></div>
+    <div><label for="full_name">Име и фамилия:</label></div>
     <input type="text" id="full_name" name="full_name">
     <div>
         <input type="submit" value="Register">

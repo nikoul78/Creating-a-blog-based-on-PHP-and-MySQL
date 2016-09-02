@@ -4,22 +4,22 @@
 
 <aside>
 
-        <h2>Последни публикации</h2>
-            <?php foreach ($this->postsSidebar as $post) : ?>
+    <h2>Последни публикации</h2>
+        <?php foreach ($this->postsSidebar as $post) : ?>
 
-                <a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?= htmlentities($post['title']); ?>
+            <a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?= htmlentities($post['title']); ?>
 
-                </a>
-            <?php endforeach; ?>
-
-
-        <h2>Виц на деня</h2>
-             <a class="heading-vicovete-link" target="_blank" href="//vicove.vesti.bg/">
-                    <span class="heading-vicovete-text">
-                        Виц на деня
-                    </span>
             </a>
-    </h2>
+        <?php endforeach; ?>
+    <br>
+    <br>
+    <h2>Виц на деня</h2>
+         <a class="heading-vicovete-link" target="_blank" href="//vicove.vesti.bg/">
+                <span class="heading-vicovete-text">
+                    Виц на деня
+                </span>
+        </a>
+
     <div class="vicove-main">
         <p class="vicove-p">
             Един човек влиза в ресторант, където робот стои зад плота вместо барман.

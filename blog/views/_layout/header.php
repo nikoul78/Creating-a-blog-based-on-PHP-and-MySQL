@@ -7,7 +7,7 @@
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>
     <title><?php if (isset($this->title)) echo htmlspecialchars($this->title) ?></title>
-    <embed src="content/music/04 - Sorry.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />
+
 </head>
 
 <body>

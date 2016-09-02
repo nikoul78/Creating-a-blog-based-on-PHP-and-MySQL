@@ -23,7 +23,7 @@ class UsersController extends BaseController
 
             $full_name = $_POST['full_name'];
             if (strlen($full_name)  > 200) {
-                $this->setValidationError("full_name", "Невалидно поле пълно име");
+                $this->setValidationError("full_name", "Невалидно поле Име и фамилия");
             }
             if($this->formValid()){
                 $userId = $this->model->register($username, $password, $full_name);
